@@ -58,7 +58,7 @@ def equatorial_to_horizontal(
     return alt_deg, az_deg
 
 
-def dms_to_deg(d: int, m: int, s: float) -> float:
+def sexagesimal_to_decimal(d: int, m: int, s: float) -> float:
     sign = -1 if d < 0 else 1
 
     d = abs(d)
@@ -67,7 +67,7 @@ def dms_to_deg(d: int, m: int, s: float) -> float:
     return deg
 
 
-def deg_to_dms(deg: float) -> tuple[int, int, float]:
+def decimal_to_sexagesimal(deg: float) -> tuple[int, int, float]:
     sign = -1 if deg < 0 else 1
     deg = abs(deg)
 
@@ -95,7 +95,7 @@ def main():
 
         alt_deg, az_deg = equatorial_to_horizontal(sirius_ra_h, sirius_dec_deg, lat_deg, lst_deg)
 
-        alt_dms, az_dms = deg_to_dms(alt_deg), deg_to_dms(az_deg)
+        alt_dms, az_dms = decimal_to_sexagesimal(alt_deg), decimal_to_sexagesimal(az_deg)
 
         print(
             f'alt: {alt_dms[0]}° {alt_dms[1]}\' {alt_dms[2]}\"\n'
