@@ -74,7 +74,7 @@ def decimal_to_sexagesimal(deg: float) -> tuple[int, int, float]:
     d = int(deg)
     m_float = (deg - d) * 60
     m = int(m_float)
-    s = (m_float - m) * 60
+    s = round((m_float - m) * 60, 1)
 
     return sign * d, m, s
 
