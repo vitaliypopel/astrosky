@@ -1,5 +1,7 @@
 import argparse
+
 import time
+
 from datetime import datetime, timezone
 
 from .service import calculate_alt_az
