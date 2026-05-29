@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from .constants import JD_UNIX_EPOCH, J2000
+from .constants import J2000, JD_UNIX_EPOCH
 from .utils import wrap360
 
 
@@ -16,8 +16,10 @@ def gmst(jd: float) -> float:
     T = (jd - J2000) / 36525.0
 
     gmst_deg = (
-        280.46061837 + 360.98564736629 * (jd - J2000) +
-        0.000387933 * T**2 - T**3 / 38710000.0
+        280.46061837
+        + 360.98564736629 * (jd - J2000)
+        + 0.000387933 * T**2
+        - T**3 / 38710000.0
     )
 
     return wrap360(gmst_deg)

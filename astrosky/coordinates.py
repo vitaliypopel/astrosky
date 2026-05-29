@@ -17,17 +17,16 @@ def equatorial_to_horizontal(
     dec = deg2rad(dec_deg)
     lat = deg2rad(lat_deg)
 
-    sin_alt = (
-        math.sin(dec) * math.sin(lat) +
-        math.cos(dec) * math.cos(lat) * math.cos(ha)
+    sin_alt = math.sin(dec) * math.sin(lat) + math.cos(dec) * math.cos(lat) * math.cos(
+        ha
     )
 
     alt = math.asin(sin_alt)
 
     sin_az = -math.sin(ha) * math.cos(dec)
-    cos_az = (
-        math.sin(dec) - math.sin(alt) * math.sin(lat)
-    ) / (math.cos(alt) * math.cos(lat))
+    cos_az = (math.sin(dec) - math.sin(alt) * math.sin(lat)) / (
+        math.cos(alt) * math.cos(lat)
+    )
 
     az = math.atan2(sin_az, cos_az)
 

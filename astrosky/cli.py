@@ -1,6 +1,5 @@
 import argparse
 import time
-
 from datetime import datetime, timezone
 
 from .service import calculate_alt_az
@@ -35,8 +34,8 @@ def main() -> None:
         )
 
         print(
-            f'alt:\t{alt[0]}°\t{alt[1]}\'\t{alt[2]}\"\n'
-            f'az:\t{az[0]}°\t{az[1]}\'\t{az[2]}\"\n'
+            f'alt:\t{alt[0]}°\t{alt[1]}\'\t{alt[2]}"\n'
+            f'az:\t{az[0]}°\t{az[1]}\'\t{az[2]}"\n'
         )
 
         time.sleep(args.interval)
