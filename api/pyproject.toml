@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "astrosky-api"
+version = "0.1.0"
+description = "Astronomical Sky Engine API"
+authors = ["vitaliypopel <vitaliypopel14@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+isort = "^8.0.1"
+ruff = "^0.15.15"
+django = "^6.0.5"
+djangorestframework = "^3.17.1"
+python-decouple = "^3.8"
+
+[tool.isort]
+force_grid_wrap = 0
+include_trailing_comma = true
+multi_line_output = 3
+use_parentheses = true
+skip = ["migrations", "apps.py", "asgi.py", "manage.py", "settings.py", "wsgi.py"]
+
+[tool.ruff]
+format.quote-style = "single"
+exclude = ["migrations", "apps.py","asgi.py", "manage.py", "settings.py", "wsgi.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
