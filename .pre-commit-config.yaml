@@ -3,10 +3,23 @@ repos:
     rev: v0.15.15
     hooks:
       - id: ruff
-        args: [--fix]
+        name: ruff-astrosky
+        files: ^astrosky/
+        args:
+          - --fix
+          - --config=astrosky/pyproject.toml
+
       - id: ruff-format
+        name: ruff-format-astrosky
+        files: ^astrosky/
+        args:
+          - --config=astrosky/pyproject.toml
 
   - repo: https://github.com/PyCQA/isort
     rev: 8.0.1
     hooks:
       - id: isort
+        name: isort-astrosky
+        files: ^engine/
+        args:
+          - --settings-path=astrosky/pyproject.toml
