@@ -20,6 +20,6 @@ repos:
     hooks:
       - id: isort
         name: isort-astrosky
-        files: ^engine/
+        files: ^astrosky/
         args:
           - --settings-path=astrosky/pyproject.toml
