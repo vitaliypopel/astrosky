@@ -135,5 +135,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# REST framework config
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 100,
+}
+
 # Catalogs path
 HYG_PATH = REPO_ROOT / 'catalogs' / 'hyg.csv'
