@@ -3,17 +3,17 @@ repos:
     rev: v0.15.15
     hooks:
       - id: ruff
-        name: ruff-astrosky
-        files: ^astrosky/
+        name: ruff-core
+        files: ^core/
         args:
           - --fix
-          - --config=astrosky/pyproject.toml
+          - --config=core/pyproject.toml
 
       - id: ruff-format
-        name: ruff-format-astrosky
-        files: ^astrosky/
+        name: ruff-format-core
+        files: ^core/
         args:
-          - --config=astrosky/pyproject.toml
+          - --config=core/pyproject.toml
 
       - id: ruff
         name: ruff-api
@@ -32,10 +32,10 @@ repos:
     rev: 8.0.1
     hooks:
       - id: isort
-        name: isort-astrosky
-        files: ^astrosky/
+        name: isort-core
+        files: ^core/
         args:
-          - --settings-path=astrosky/pyproject.toml
+          - --settings-path=core/pyproject.toml
 
       - id: isort
         name: isort-api
