@@ -112,4 +112,4 @@ class Star(models.Model):
         ]
 
     def __str__(self) -> str:
-        return self.name or self.bf or 'HIP %d' % self.hip or str(self.pk)
+        return self.name or str(self.pk)
