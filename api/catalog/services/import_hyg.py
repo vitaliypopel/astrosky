@@ -13,7 +13,9 @@ def import_hyg() -> None:
         code='hyg',
         defaults={
             'name': 'HYG Database',
-            'description': 'HYG Database (v4.2) is subset of the star data in three major catalogs: the Hipparcos Catalog, the Yale Bright Start Catalog (5th Edition) and the Gliese Catalog of Nearbly Stars (3rd Edition).',
+            'description': 'HYG Database (v4.2) is subset of the star data in three major catalogs: '
+            'the Hipparcos Catalog, the Yale Bright Start Catalog (5th Edition) '
+            'and the Gliese Catalog of Nearbly Stars (3rd Edition).',
         },
     )
 
