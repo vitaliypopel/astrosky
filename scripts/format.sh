@@ -8,7 +8,7 @@ setup() {
   YELLOW="\e[0;33m"
   NO_COLOR="\e[0;0m"
 
-  MODE="all"
+  MODE="general"
   if [[ " $* " == *" --core "* ]]; then
     MODE="core"
   elif [[ " $* " == *" --api "* ]]; then
@@ -18,15 +18,22 @@ setup() {
   echo -e "${BLUE}Setup Mode:${NO_COLOR}\t${GREEN}$MODE${NO_COLOR}"
 }
 
-format_core() {
-  echo -e "\n${BLUE}Formatting core...${NO_COLOR}"
-  cd core
+format_python_code() {
+  echo -e "\n${YELLOW}Checking and fixing code...${NO_COLOR}"
+  poetry run ruff check --fix
 
   echo -e "\n${YELLOW}Formatting code...${NO_COLOR}"
   poetry run ruff format .
 
   echo -e "\n${YELLOW}Sorting imports...${NO_COLOR}"
   poetry run isort .
+}
+
+format_core() {
+  echo -e "\n${BLUE}Formatting core...${NO_COLOR}"
+  cd core
+
+  format_python_code
 
   cd ..
 }
@@ -35,11 +42,7 @@ format_api() {
   echo -e "\n${BLUE}Formatting api...${NO_COLOR}"
   cd api
 
-  echo -e "\n${YELLOW}Formatting code...${NO_COLOR}"
-  poetry run ruff format .
-
-  echo -e "\n${YELLOW}Sorting imports...${NO_COLOR}"
-  poetry run isort .
+  format_python_code
 
   cd ..
 }
