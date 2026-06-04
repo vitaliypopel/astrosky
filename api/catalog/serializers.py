@@ -10,8 +10,6 @@ class CatalogSerializer(serializers.ModelSerializer):
 
 
 class StarSerializer(serializers.ModelSerializer):
-    catalog = CatalogSerializer()
-
     class Meta:
         model = Star
         fields = '__all__'
