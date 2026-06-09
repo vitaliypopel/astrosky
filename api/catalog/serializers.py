@@ -22,7 +22,7 @@ class CatalogSerializer(serializers.ModelSerializer):
 
 
 class StarSerializer(serializers.ModelSerializer):
-    catalog = CatalogSerializer()
+    catalog = CatalogSerializer(read_only=True)
 
     class Meta:
         model = Star

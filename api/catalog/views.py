@@ -13,7 +13,10 @@ class CatalogViewSet(viewsets.ReadOnlyModelViewSet):
     def get_queryset(self) -> QuerySet[Catalog]:
         return Catalog.objects.annotate(
             stars_count=Count('stars'),
-            named_stars_count=Count('stars', filter=Q(stars__name__gt='')),
+            named_stars_count=Count(
+                'stars',
+                filter=Q(stars__name__isnull=False) & ~Q(stars__name=''),
+            ),
         )
 
 
