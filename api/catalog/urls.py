@@ -1,27 +1,13 @@
-from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
 
 from .views import CatalogViewSet, StarViewSet
 
+router = DefaultRouter()
+router.register(r'catalogs', CatalogViewSet, basename='catalog')
+router.register(r'stars', StarViewSet, basename='star')
+
 app_name = 'catalog'
 urlpatterns = [
-    path(
-        'catalogs/',
-        CatalogViewSet.as_view({'get': 'list'}),
-        name='catalog-list',
-    ),
-    path(
-        'catalogs/<slug:code>/',
-        CatalogViewSet.as_view({'get': 'retrieve'}),
-        name='catalog-detail',
-    ),
-    path(
-        'catalogs/<slug:code>/stars/',
-        StarViewSet.as_view({'get': 'list'}),
-        name='catalog-star-list',
-    ),
-    path(
-        'catalogs/<slug:code>/stars/<int:source_id>/',
-        StarViewSet.as_view({'get': 'retrieve'}),
-        name='catalog-star-detail',
-    ),
+    path('', include(router.urls)),
 ]

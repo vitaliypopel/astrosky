@@ -1,4 +1,3 @@
-from django.db.models.query import QuerySet
 from rest_framework import viewsets
 
 from .models import Catalog, Star
@@ -12,8 +11,5 @@ class CatalogViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class StarViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Star.objects.all()
     serializer_class = StarSerializer
-    lookup_field = 'source_id'
-
-    def get_queryset(self) -> QuerySet[Star]:
-        return Star.objects.filter(catalog__code=self.kwargs['code'])
