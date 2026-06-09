@@ -25,7 +25,7 @@ class CatalogAdmin(admin.ModelAdmin):
 @admin.register(Star)
 class StarAdmin(admin.ModelAdmin):
     list_display = (
-        'name',
+        'get_name',
         'get_catalog_link',
         'source_id',
         'con',
@@ -37,6 +37,12 @@ class StarAdmin(admin.ModelAdmin):
     list_filter = ('name', 'catalog__code', 'con')
     ordering = ('source_id',)
     search_fields = ('name', 'con')
+
+    def get_name(self, star: Star) -> str:
+        return str(star)
+
+    get_name.admin_order_field = 'name'
+    get_name.short_description = 'Name'
 
     def get_catalog_link(self, star: Star) -> SafeString | Any:
         catalog_admin_name = 'admin:catalog_catalog_change'

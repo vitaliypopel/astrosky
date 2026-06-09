@@ -112,4 +112,4 @@ class Star(models.Model):
         ]
 
     def __str__(self) -> str:
-        return self.name or str(self.pk)
+        return self.name or '%s %d' % (self.catalog.code.upper(), self.source_id)
