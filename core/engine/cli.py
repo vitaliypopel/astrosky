@@ -28,6 +28,9 @@ def main() -> None:
     lat_deg = args.lat
     lon_deg = args.lon
 
+    ra_hms = deg_to_dms(ra_h)
+    dec_dms = deg_to_dms(dec_deg)
+
     while True:
         dt = datetime.now(timezone.utc)
 
@@ -44,8 +47,8 @@ def main() -> None:
         az_dms = deg_to_dms(result['az'])
 
         print(
-            f'ra:\t{ra_h}\n'
-            f'dec:\t{dec_deg}\n'
+            f'ra:\t{ra_hms[0]}h\t{ra_hms[1]}m\t{ra_hms[2]}s\n'
+            f'dec:\t{dec_dms[0]}°\t{dec_dms[1]}\'\t{dec_dms[2]}"\n'
             f'lat:\t{lat_deg}\n'
             f'lon:\t{lon_deg}\n'
             f'dt:\t{dt}\n'
