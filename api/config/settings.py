@@ -142,4 +142,4 @@ REST_FRAMEWORK = {
 }
 
 # Catalogs path
-HYG_PATH = REPO_ROOT / 'catalogs' / 'hyg.csv'
+HYG_PATH = REPO_ROOT / 'resources' / 'catalogs' / 'hyg.csv'
