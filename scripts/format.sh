@@ -2,22 +2,6 @@
 
 set -e
 
-setup() {
-  BLUE="\e[1;34m"
-  GREEN="\e[1;32m"
-  YELLOW="\e[0;33m"
-  NO_COLOR="\e[0;0m"
-
-  MODE="general"
-  if [[ " $* " == *" --core "* ]]; then
-    MODE="core"
-  elif [[ " $* " == *" --api "* ]]; then
-    MODE="api"
-  fi
-
-  echo -e "${BLUE}Setup Mode:${NO_COLOR}\t${GREEN}$MODE${NO_COLOR}"
-}
-
 format_python_code() {
   echo -e "\n${YELLOW}Checking and fixing code...${NO_COLOR}"
   poetry run ruff check --fix
@@ -53,11 +37,14 @@ format() {
 }
 
 main() {
-  setup "$@"
+  BLUE="\e[1;34m"
+  GREEN="\e[1;32m"
+  YELLOW="\e[0;33m"
+  NO_COLOR="\e[0;0m"
 
-  if [[ "$MODE" == "core" ]]; then
+  if [[ " $* " == *" --core "* ]]; then
     format_core
-  elif [[ "$MODE" == "api" ]]; then
+  elif [[ " $* " == *" --api "* ]]; then
     format_api
   else
     format
