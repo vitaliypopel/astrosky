@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "astrosky"
+name = "astrosky-core"
 version = "0.1.0"
 description = "Astronomical Sky Engine"
 authors = ["vitaliypopel <vitaliypopel14@gmail.com>"]

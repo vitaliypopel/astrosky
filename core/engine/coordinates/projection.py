@@ -1,7 +1,7 @@
 import math
 
-from core.engine.math.angles import wrap360
-from core.engine.math.scalar import rad2deg
+from engine.math.angles import wrap360
+from engine.math.scalar import rad2deg
 
 
 def project_horizontal(alt: float, sin_az: float, cos_az: float) -> tuple[float, float]:

@@ -1,5 +1,5 @@
-from core.engine.math.angles import wrap360
-from core.engine.time.constants import J2000
+from engine.math.angles import wrap360
+from engine.time.constants import J2000
 
 
 def gmst(jd: float) -> float:

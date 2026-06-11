@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from core.engine.time.constants import JD_UNIX_EPOCH
+from engine.time.constants import JD_UNIX_EPOCH
 
 
 def julian_date(dt: datetime) -> float:

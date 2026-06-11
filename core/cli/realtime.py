@@ -2,8 +2,8 @@ import argparse
 import time
 from datetime import datetime, timezone
 
-from core.engine import calculate_altaz
-from core.engine.formatting.sexagesimal import deg_to_dms, deg_to_hms
+from engine import calculate_altaz
+from engine.formatting.sexagesimal import deg_to_dms, deg_to_hms
 
 
 def parse_args() -> argparse.Namespace:

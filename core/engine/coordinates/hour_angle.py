@@ -1,4 +1,4 @@
-from core.engine.math.angles import wrap180
+from engine.math.angles import wrap180
 
 
 def hour_angle(ra_h: float, lst_deg: float) -> float:

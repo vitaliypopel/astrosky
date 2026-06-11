@@ -1,11 +1,8 @@
 from datetime import datetime
 
-from core.engine.coordinates import (
-    equatorial_to_horizontal_from_ha,
-    hour_angle,
-)
-from core.engine.time.julian import julian_date
-from core.engine.time.sidereal import gmst, lst
+from engine.coordinates import equatorial_to_horizontal_from_ha, hour_angle
+from engine.time.julian import julian_date
+from engine.time.sidereal import gmst, lst
 
 
 def calculate_altaz(
