@@ -24,3 +24,9 @@ staticfiles/
 
 # Postgres data
 pgdata/
+
+# Ruff cache
+.ruff_cache/
+
+# Node modules
+node_modules/

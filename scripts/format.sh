@@ -13,6 +13,14 @@ format_python_code() {
   poetry run isort .
 }
 
+format_nodejs_code() {
+  echo -e "\n${YELLOW}Checking and fixing code...${NO_COLOR}"
+  npm run lint:eslint
+
+  echo -e "\n${YELLOW}Formatting code and sorting imports...${NO_COLOR}"
+  npm run format
+}
+
 format_core() {
   echo -e "\n${BLUE}Formatting core...${NO_COLOR}"
   cd core
@@ -31,9 +39,19 @@ format_api() {
   cd ..
 }
 
+format_web() {
+  echo -e "\n${BLUE}Formatting web...${NO_COLOR}"
+  cd web
+
+  format_nodejs_code
+
+  cd ..
+}
+
 format() {
   format_core
   format_api
+  format_web
 }
 
 main() {
@@ -46,6 +64,8 @@ main() {
     format_core
   elif [[ " $* " == *" --api "* ]]; then
     format_api
+  elif [[ " $* " == *" --web "* ]]; then
+    format_web
   else
     format
   fi
