@@ -36,9 +36,7 @@ SECRET_KEY = config('SECRET_KEY', default='SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=False)
 
-ALLOWED_HOSTS = [
-    config('HOST', default='0.0.0.0'),
-]
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='0.0.0.0').split(',')
 
 
 # Application definition
@@ -50,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'corsheaders',
 
     'rest_framework',
 
@@ -64,6 +64,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -142,6 +144,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 100,
 }
+
+# CORS config
+CORS_ALLOWED_ORIGINS = [
+    config('WEB_URL', default='http://localhost:5000'),
+]
 
 # Catalogs path
 HYG_PATH = REPO_ROOT / 'resources' / 'catalogs' / 'hyg.csv'

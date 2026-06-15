@@ -14,6 +14,7 @@ python-decouple = "^3.8"
 psycopg2-binary = "^2.9.12"
 
 astrosky-core = { path = "../core", develop = true }
+django-cors-headers = "^4.9.0"
 
 [tool.isort]
 force_grid_wrap = 0
