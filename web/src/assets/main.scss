@@ -3,10 +3,18 @@
 
 @import '@/assets/icons.scss';
 
-.icon-text {
-  display: flex !important;
-  align-items: center;
-  gap: 0.5rem;
+.is-fixed-above-lg {
+  z-index: 2 !important;
+  position: sticky !important;
+  top: 0 !important;
+  -webkit-backdrop-filter: blur(1rem) !important;
+  backdrop-filter: blur(1rem) !important;
+  background-color: var(--pico-header-background) !important;
+  transition:
+    border-top-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out !important;
+  padding: 0.5rem 0 !important;
+  border-bottom: var(--pico-border-width) solid transparent !important;
 }
 
 nav details.dropdown {
@@ -16,6 +24,8 @@ nav details.dropdown {
 
 nav details.dropdown > summary {
   white-space: nowrap;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 nav details.dropdown > ul {
@@ -26,4 +36,10 @@ nav details.dropdown > ul {
   left: auto;
   z-index: 1000;
   padding: 0.5rem 0;
+}
+
+.icon-text {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
 }

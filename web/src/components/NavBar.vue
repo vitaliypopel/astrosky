@@ -9,7 +9,7 @@ const themeStore = useThemeStore()
 </script>
 
 <template>
-  <header>
+  <header class="is-fixed-above-lg">
     <div class="container">
       <nav>
         <ul>
@@ -20,7 +20,7 @@ const themeStore = useThemeStore()
         <ul>
           <li>
             <details class="dropdown">
-              <summary>
+              <summary role="button" class="outline contrast">
                 <i class="pi pi-language pico-color-cyan-500" />
               </summary>
               <ul dir="rtl">
@@ -47,7 +47,7 @@ const themeStore = useThemeStore()
           </li>
           <li>
             <details class="dropdown">
-              <summary>
+              <summary role="button" class="outline contrast">
                 <i
                   class="pi pi-palette"
                   :class="{
