@@ -1,8 +1,9 @@
 from engine.math.angles import wrap360
-from engine.time.constants import J2000
 
 
 def gmst(jd: float) -> float:
+    J2000 = 2451545.0
+
     T = (jd - J2000) / 36525.0
 
     return wrap360(
