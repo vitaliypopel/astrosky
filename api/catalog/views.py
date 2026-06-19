@@ -26,7 +26,7 @@ class CatalogViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class StarViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Star.objects.all()
+    queryset = Star.objects.all().order_by('pk')
     serializer_class = StarSerializer
 
 
