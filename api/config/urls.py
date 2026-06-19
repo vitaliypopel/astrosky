@@ -18,6 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+admin.site.site_header = 'Astrosky Admin Panel'
+admin.site.site_title = 'Astrosky'
+admin.site.index_title = 'Admin Panel'
+
 api_urls = [
     path('', include('catalog.urls')),
 ]
