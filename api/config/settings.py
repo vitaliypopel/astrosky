@@ -151,4 +151,4 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # Catalogs path
-HYG_PATH = REPO_ROOT / 'resources' / 'catalogs' / 'hyg.csv'
+HYG_PATH = REPO_ROOT / 'datasets' / 'hyg.csv'
