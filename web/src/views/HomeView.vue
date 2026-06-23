@@ -1,1 +1,21 @@
-<template></template>
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
+
+<template>
+  <header>
+    <h1>{{ $t('nav.home') }}</h1>
+  </header>
+  <section class="grid">
+    <article>
+      <header>
+        <h3 class="m-0 p-0">
+          <RouterLink to="/catalogs" class="contrast">
+            {{ $t('catalogs.title') }}
+          </RouterLink>
+        </h3>
+      </header>
+      {{ $t('catalogs.subtitle') }}
+    </article>
+  </section>
+</template>

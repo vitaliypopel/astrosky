@@ -1,7 +1,40 @@
 {
   "nav": {
+    "home": "Home",
+    "catalogs": "Catalogs",
     "systemTheme": "System",
     "darkTheme": "Dark",
     "lightTheme": "Light"
+  },
+
+  "common": {
+    "code": "Code",
+    "created": "Created",
+    "updated": "Updated",
+    "description": "Description",
+    "information": "Information",
+    "loading": "Loading..."
+  },
+
+  "catalogs": {
+    "title": "Catalogs",
+    "subtitle": "Browse available astronomical catalogs",
+
+    "empty": {
+      "title": "No catalogs found"
+    }
+  },
+
+  "catalog": {
+    "title": "Catalog",
+
+    "stats": {
+      "starsCount": "Stars count",
+      "namedStarsCount": "Named stars count"
+    },
+
+    "empty": {
+      "title": "Catalog not found"
+    }
   }
 }

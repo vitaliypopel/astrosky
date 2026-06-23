@@ -1,7 +1,40 @@
 {
   "nav": {
+    "home": "Головна",
+    "catalogs": "Каталоги",
     "systemTheme": "Системна",
     "darkTheme": "Темна",
     "lightTheme": "Світла"
+  },
+
+  "common": {
+    "code": "Код",
+    "created": "Створено",
+    "updated": "Оновлено",
+    "description": "Опис",
+    "information": "Інформація",
+    "loading": "Завантаження..."
+  },
+
+  "catalogs": {
+    "title": "Каталоги",
+    "subtitle": "Перегляньте доступні астрономічні каталоги",
+
+    "empty": {
+      "title": "Каталогів не знайдено"
+    }
+  },
+
+  "catalog": {
+    "title": "Каталог",
+
+    "stats": {
+      "starsCount": "Кількість зірок",
+      "namedStarsCount": "Кількість зірок з іменами"
+    },
+
+    "empty": {
+      "title": "Каталог не знайдено"
+    }
   }
 }
