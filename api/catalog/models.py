@@ -111,18 +111,26 @@ class Star(models.Model):
             ),
         ]
 
-    def __str__(self) -> str:
-        if self.name:
-            return self.name
-        elif self.hip:
-            return 'HIP %d' % self.hip
-        elif self.hd:
-            return 'HD %d' % self.hd
-        elif self.hr:
-            return 'HR %d' % self.hr
-        elif self.gl:
-            return self.gl
-        elif self.bf:
-            return self.bf
+    def get_names(self) -> list[str]:
+        names = []
 
-        return '%s %d' % (self.catalog.code.upper(), self.source_id)
+        if self.name:
+            names.append(self.name)
+        if self.hip:
+            names.append('HIP %d' % self.hip)
+        if self.hd:
+            names.append('HD %d' % self.hd)
+        if self.hr:
+            names.append('HR %d' % self.hr)
+        if self.gl:
+            names.append(self.gl)
+        if self.bf:
+            names.append(self.bf)
+
+        return names
+
+    def __str__(self) -> str:
+        if names := self.get_names():
+            return names[0]
+
+        return 'Unknown'

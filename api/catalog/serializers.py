@@ -9,21 +9,16 @@ class CatalogSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Catalog
-        fields = (
-            'id',
-            'name',
-            'code',
-            'description',
-            'stars_count',
-            'named_stars_count',
-            'created_at',
-            'updated_at',
-        )
+        fields = '__all__'
 
 
 class StarSerializer(serializers.ModelSerializer):
+    names = serializers.SerializerMethodField()
     catalog = CatalogSerializer(read_only=True)
 
     class Meta:
         model = Star
         fields = '__all__'
+
+    def get_names(self, star: Star) -> list[str]:
+        return star.get_names()
