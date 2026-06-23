@@ -112,4 +112,17 @@ class Star(models.Model):
         ]
 
     def __str__(self) -> str:
-        return self.name or '%s %d' % (self.catalog.code.upper(), self.source_id)
+        if self.name:
+            return self.name
+        elif self.hip:
+            return 'HIP %d' % self.hip
+        elif self.hd:
+            return 'HD %d' % self.hd
+        elif self.hr:
+            return 'HR %d' % self.hr
+        elif self.gl:
+            return self.gl
+        elif self.bf:
+            return self.bf
+
+        return '%s %d' % (self.catalog.code.upper(), self.source_id)
