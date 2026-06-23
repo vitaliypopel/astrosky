@@ -1,10 +1,5 @@
-from datetime import datetime, timezone
-
 from django.db.models import Count, Q, QuerySet
-from engine import calculate_altaz
-from rest_framework import views, viewsets
-from rest_framework.request import Request
-from rest_framework.response import Response
+from rest_framework import viewsets
 
 from .models import Catalog, Star
 from .serializers import CatalogSerializer, StarSerializer
@@ -28,16 +23,3 @@ class CatalogViewSet(viewsets.ReadOnlyModelViewSet):
 class StarViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Star.objects.select_related('catalog').order_by('pk')
     serializer_class = StarSerializer
-
-
-class AlzAzAPIView(views.APIView):
-    def get(self, request: Request) -> Response:
-        result = calculate_altaz(
-            ra_h=float(request.GET['ra']),
-            dec_deg=float(request.GET['dec']),
-            lat_deg=float(request.GET['lat']),
-            lon_deg=float(request.GET['lon']),
-            dt=datetime.now(timezone.utc),
-        )
-
-        return Response(result)
