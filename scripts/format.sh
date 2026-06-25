@@ -14,9 +14,6 @@ format_python_code() {
 }
 
 format_nodejs_code() {
-  echo -e "\n${YELLOW}Checking and fixing code...${NO_COLOR}"
-  npm run lint:eslint
-
   echo -e "\n${YELLOW}Formatting code and sorting imports...${NO_COLOR}"
   npm run format
 }
