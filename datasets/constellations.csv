@@ -1,0 +1,89 @@
+season,iau,name,ra,dec,principal_star,area_square_degrees,area_sphere_percentage,zone_equatorial,zone_ecliptic,zone_milky_way,quadrant,origin_name
+Spring,Lup,Wolf,119.97083333333333,-42.71472222222223,α Lupi,333.683,0.81,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 3,Ptolemy
+Spring,UMi,Little Bear,241.39583333333331,77.71083333333334,Polaris,255.864,0.62,North constellation - North Celestial pole,North ecliptic constellation,,North Hemisphere Quadrant 3,Ptolemy
+Spring,Her,Hercules,260.81666666666666,27.50916666666667,Kornephoros,1225.148,2.97,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 3,Ptolemy
+Winter,Mon,Unicorn,345.0,0.2925,β Monocerotis,481.569,1.17,Equatorial constellation,South ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 2,Plancius
+Southern hemisphere constellation,Phe,Phoenix,114.82083333333334,-48.59,Ankaa,469.319,1.14,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Bayer
+Autumn,Aur,Charioteer,220.76666666666665,42.035555555555554,Capella,657.438,1.59,North constellation,North ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 2,Ptolemy
+Southern hemisphere constellation,Cir,Compass,91.175,-63.03944444444444,α Circini,93.353,0.23,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 3,Lacaille
+Spring,Boo,Herdsman,70.61250000000001,31.204444444444444,Arcturus,906.831,2.20,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 3,Ptolemy
+Winter,Hya,"Hydra, Sea Snake",174.30416666666667,-14.541944444444445,Alphard,1302.844,3.16,Equatorial constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Ptolemy
+Spring,Dra,Dragon,42.11666666666666,67.0111111111111,Eltanin,1082.952,2.63,North constellation,North ecliptic pole,,North Hemisphere Quadrant 3,Ptolemy
+Autumn,Tau,Bull,254.26666666666665,14.884166666666667,Aldebaran,797.249,1.93,Equatorial constellation,Zodiacal constellation #3,Milky Way Equator,North Hemisphere Quadrant 1,Ptolemy
+Southern hemisphere constellation,Vol,Flying Fish,201.16250000000002,-69.80194444444444,β Volantis,141.354,0.34,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Bayer
+Southern hemisphere constellation,Tuc,Toucan,356.76666666666665,31.48222222222222,α Tucanae,294.557,0.71,South constellation,South ecliptic constellation,,North Hemisphere Quadrant 1,Bayer
+Spring,UMa,Big Bear,32.77916666666666,50.72416666666667,Alioth,1279.66,3.10,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 2,Ptolemy
+Southern hemisphere constellation,Col,Dove,171.0625,-35.10194444444445,Phact,270.184,0.65,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Plancius
+Winter,Leo,Lion,106.0125,13.142222222222221,Regulus,946.964,2.30,Equatorial constellation,Zodiacal constellation #6,,North Hemisphere Quadrant 2,Ptolemy
+Autumn,Scl,Sculptor's Studio,7.404166666666667,-32.09166666666667,α Sculptoris,474.764,1.15,South constellation,South ecliptic constellation,Milky Way South pole,South Hemisphere Quadrant 1,Lacaille
+Southern hemisphere constellation,Mic,Microscope,188.86666666666667,-36.280277777777776,γ Microscopii,209.513,0.51,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Lacaille
+Southern hemisphere constellation,Ara,Altar,39.56666666666666,-56.59166666666667,β Arae,237.057,0.57,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 3,Ptolemy
+Southern hemisphere constellation,Ret,Reticle,117.05416666666666,-60.00694444444444,α Reticuli,113.936,0.28,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Lacaille
+Southern hemisphere constellation,Pyx,Compass,334.2791666666667,-27.352777777777778,α Pyxidis,220.833,0.54,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Lacaille
+Southern hemisphere constellation,Mus,Fly,242.27083333333331,-70.16833333333334,α Muscae,138.355,0.34,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 3,Bayer
+Southern hemisphere constellation,Tel,Telescope,154.12083333333334,-65.83888888888889,α Telescopii,251.512,0.61,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Lacaille
+Autumn,Eri,Eridanus,132.90416666666667,-28.760277777777777,Achernar,1137.919,2.76,Equatorial constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Ptolemy
+Southern hemisphere constellation,Hyi,Lesser Snake,35.270833333333336,-69.96083333333334,β Hydri,243.035,0.59,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Bayer
+Summer,CrB,Northern Crown,186.9125,32.63027777777778,Alphecca,178.71,0.43,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 3,Ptolemy
+Winter,LMi,Little Lion,228.3375,32.135555555555555,Praecipua,231.956,0.56,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 2,Hevelius
+Southern hemisphere constellation,Car,Keel,130.54166666666666,-63.221111111111114,Canopus,494.184,1.20,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 2,Lacaille
+Southern hemisphere constellation,For,Furnace,102.55833333333332,-31.635277777777777,Dalim,397.502,0.96,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Lacaille
+Southern hemisphere constellation,Pup,"Stern,Poop deck",14.129166666666665,-31.184444444444445,Naos,673.434,1.63,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 2,Lacaille
+Southern hemisphere constellation,Men,Mesa,314.6166666666667,-77.50666666666666,α Mensae,153.484,0.37,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Lacaille
+Summer,Sgr,Archer,6.616666666666667,-28.48361111111111,Kaus Australis,867.432,2.10,South constellation,Zodiacal constellation #11,Milky Way Equator,South Hemisphere Quadrant 4,Ptolemy
+Southern hemisphere constellation,Dor,Gold Fish,294.7708333333333,-59.38944444444444,α Doradus,179.173,0.43,South constellation,South ecliptic pole,,South Hemisphere Quadrant 1,Bayer
+Summer,Cyg,Swan,280.1625,44.55277777777778,Deneb,803.983,1.95,North constellation,North ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 4,Ptolemy
+Winter,Lyn,Wildcat,282.8208333333334,47.46666666666667,α Lyncis,545.386,1.32,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 2,Hevelius
+Spring,Vir,Virgin,334.40833333333336,-4.1641666666666675,Spica,1294.428,3.14,Equatorial constellation,Zodiacal constellation #7,,South Hemisphere Quadrant 3,Ptolemy
+Summer,Sge,Arrow,253.35000000000002,18.86888888888889,γ Sagittae,79.932,0.19,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Ptolemy
+Winter,CMa,Great Dog,88.06666666666666,-22.145,Sirius,380.118,0.92,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 2,Ptolemy
+Southern hemisphere constellation,Ant,Pump,12.191666666666666,-32.48361111111111,α Antliae,238.901,0.58,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Lacaille
+Spring,Crv,Crow,78.7125,-18.43888888888889,Gienah,183.801,0.45,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 3,Ptolemy
+Winter,Sex,Sextans,286.64166666666665,-2.6244444444444444,α Sextantis,313.515,0.76,Equatorial constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Hevelius
+Summer,Sct,Shield,238.57500000000002,-9.892222222222221,α Scuti,109.114,0.26,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 4,Hevelius
+Summer,Vul,Little Fox,143.76666666666665,24.448888888888888,Anser,268.165,0.65,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Hevelius
+Spring,CVn,Hound Dogs,227.26666666666665,40.10305555555556,Cor Caroli,465.194,1.13,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 3,Hevelius
+Summer,Aql,Eagle,228.15,3.4180555555555556,Altair,652.473,1.58,Equatorial constellation,North ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 4,Ptolemy
+Summer,Cep,Cepheus,330.0,71.01416666666667,Alderamin,587.787,1.42,North constellation,North ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 4,Ptolemy
+Autumn,Cet,Sea-monster,191.8625,-7.187777777777778,Diphda,1231.411,2.99,Equatorial constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Ptolemy
+Southern hemisphere constellation,Cen,Centaurus,196.1125,-47.35333333333334,Rigil Kentaurus,1060.422,2.57,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 3,Ptolemy
+Southern hemisphere constellation,Vel,Sail,289.975,-47.1675,γ2Velorum,499.649,1.21,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 2,Lacaille
+Autumn,Cas,Cassiopeia,19.816666666666666,62.18444444444444,Schedar,598.407,1.45,North constellation,North ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 1,Ptolemy
+Southern hemisphere constellation,Nor,Scale,261.0375,-51.3525,γ2Normae,165.29,0.40,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 3,Lacaille
+Spring,Lib,Balance,160.0125,-15.235555555555555,Zubeneschamali,538.052,1.30,South constellation,Zodiacal constellation #8,,South Hemisphere Quadrant 3,Ptolemy
+Summer,Lac,Lizard,337.0333333333333,46.0475,α Lacertae,200.688,0.49,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Hevelius
+Southern hemisphere constellation,Ind,Indian,329.63749999999993,-59.711111111111116,α Indi,294.006,0.71,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Bayer
+Autumn,Psc,Fishes,225.0,13.689722222222223,Alpherg,889.417,2.16,Equatorial constellation,Zodiacal constellation #1,,North Hemisphere Quadrant 1,Ptolemy
+Summer,Peg,Winged Horse,47.70833333333333,19.47722222222222,Enif,1120.794,2.72,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Ptolemy
+Southern hemisphere constellation,Aps,Bird of Paradise,260.70416666666665,-75.3,α Apodis,206.327,0.50,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 3,Bayer
+Spring,Sco,Scorpion,108.95,-27.04138888888889,Antares,496.783,1.20,South constellation,Zodiacal constellation #9,Milky Way Equator,South Hemisphere Quadrant 3,Ptolemy
+Autumn,Tri,Triangle,70.55416666666666,32.39111111111111,β Trianguli,131.847,0.32,North constellation,North ecliptic constellation,,South Hemisphere Quadrant 3,Ptolemy
+Winter,Gem,Twins,169.81666666666666,22.60027777777778,Pollux,513.761,1.25,North constellation,Zodiacal constellation #4,Milky Way Equator,North Hemisphere Quadrant 2,Ptolemy
+Winter,CMi,Little Dog,218.725,6.434166666666667,Procyon,183.367,0.44,Equatorial constellation,South ecliptic constellation,,North Hemisphere Quadrant 2,Ptolemy
+Southern hemisphere constellation,Cru,Southern Cross,310.50416666666666,-60.18861111111111,Acrux,68.447,0.17,South constellation,South ecliptic constellation,Milky Way Equator,South Hemisphere Quadrant 3,Plancius
+Summer,Lyr,Lyre,154.17916666666667,36.69333333333333,Vega,286.476,0.69,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Ptolemy
+Summer,PsA,Southern Fish,303.6166666666667,-30.648055555555555,Fomalhaut,245.375,0.59,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Ptolemy
+Autumn,Cam,Giraffe,129.9,69.39138888888888,βCamelopardalis,756.828,1.83,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 2,Plancius
+Southern hemisphere constellation,Pav,Peacock,85.69166666666668,-65.79138888888889,Peacock,377.666,0.92,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Bayer
+Winter,Oph,Serpent Holder,294.29583333333335,-7.920555555555556,Rasalhague,948.34,2.30,Equatorial constellation,Zodiacal constellation #10,Milky Way Equator,South Hemisphere Quadrant 3,Ptolemy
+Southern hemisphere constellation,Hor,Clock,49.233333333333334,-53.33833333333334,α Horologii,248.885,0.60,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Lacaille
+Autumn,Lep,Hare,83.64583333333333,-19.055000000000003,Arneb,290.291,0.70,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Ptolemy
+Spring,Ser,Serpens,58.8625,6.125555555555555,Unukalhai,636.928,1.54,Equatorial constellation,North ecliptic constellation,,North Hemisphere Quadrant 3,Ptolemy
+Southern hemisphere constellation,Gru,Crane,336.9125,-46.35305555555556,Alnair,365.513,0.89,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Bayer
+Summer,CrA,Southern Crown,237.74583333333334,-41.15694444444444,Meridiana,127.696,0.31,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Ptolemy
+Southern hemisphere constellation,TrA,Southern Triangle,81.37500000000001,-51.03916666666667,Atria,109.978,0.27,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Bayer
+Summer,Aqr,Water Bearer,25.041666666666664,-10.793055555555556,Sadalsuud,979.854,2.38,Equatorial constellation,Zodiacal constellation #13,,South Hemisphere Quadrant 4,Ptolemy
+Autumn,And,Andromeda,295.0083333333333,37.441944444444445,Alpheratz,722.278,1.75,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 1,Ptolemy
+Autumn,Ari,Ram,134.31666666666666,20.798333333333336,Hamal,441.395,1.07,North constellation,Zodiacal constellation #2,,North Hemisphere Quadrant 1,Ptolemy
+Spring,Com,Hair of Berenice,279.82916666666665,23.309444444444445,β Comae Berenices,386.475,0.94,North constellation,North ecliptic constellation,Milky Way North pole,North Hemisphere Quadrant 3,Tycho Brahe
+Summer,Del,Dolphin,49.50833333333333,11.673888888888888,Rotanev,188.549,0.46,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Ptolemy
+Southern hemisphere constellation,Oct,Octant,83.74583333333332,-82.15333333333334,ν Octantis,291.045,0.71,South constellation - PSouth constellation,South ecliptic constellation,,South Hemisphere Quadrant 4,Lacaille
+Summer,Equ,Little Horse,106.1,7.7636111111111115,Kitalpha,71.641,0.17,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 4,Ptolemy
+Autumn,Per,Perseus,317.85833333333335,45.02194444444444,Mirfak,614.997,1.49,North constellation,North ecliptic constellation,,North Hemisphere Quadrant 1,Ptolemy
+Southern hemisphere constellation,Cha,Chameleon,196.9,-79.20833333333334,α Chamaeleontis,131.592,0.32,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Bayer
+Summer,Cap,Goat,315.88750000000005,-18.0275,Deneb Algedi,413.947,1.00,South constellation,Zodiacal constellation #12,,South Hemisphere Quadrant 4,Ptolemy
+Southern hemisphere constellation,Cae,Chisel,160.47083333333333,-37.891666666666666,α Caeli,124.865,0.30,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Lacaille
+Winter,Cnc,Crab,186.71666666666667,19.809722222222224,Tarf,505.872,1.23,North constellation,Zodiacal constellation #5,,North Hemisphere Quadrant 2,Ptolemy
+Winter,Crt,Goblet,308.8666666666667,-15.937222222222221,δ Crateris,282.398,0.68,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 2,Ptolemy
+Winter,Ori,"Orion, Hunter",340.6,5.959444444444444,Rigel,594.12,1.44,Equatorial constellation,South ecliptic constellation,Milky Way Equator,North Hemisphere Quadrant 1,Ptolemy
+Southern hemisphere constellation,Pic,Painter's Easel,153.79999999999998,-53.47916666666667,α Pictoris,246.739,0.60,South constellation,South ecliptic constellation,,South Hemisphere Quadrant 1,Lacaille
