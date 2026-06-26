@@ -17,5 +17,15 @@ import { RouterLink } from 'vue-router'
       </header>
       {{ $t('catalogs.subtitle') }}
     </article>
+    <article>
+      <header>
+        <h3 class="m-0 p-0">
+          <RouterLink to="/stars" class="contrast">
+            {{ $t('stars.title') }}
+          </RouterLink>
+        </h3>
+      </header>
+      {{ $t('stars.subtitle') }}
+    </article>
   </section>
 </template>

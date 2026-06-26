@@ -1,10 +1,11 @@
 {
   "nav": {
     "home": "Home",
-    "catalogs": "Catalogs",
     "systemTheme": "System",
     "darkTheme": "Dark",
-    "lightTheme": "Light"
+    "lightTheme": "Light",
+    "previous": "Previous",
+    "next": "Next"
   },
 
   "common": {
@@ -13,7 +14,36 @@
     "updated": "Updated",
     "description": "Description",
     "information": "Information",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "unknown": "Unknown"
+  },
+
+  "properties": {
+    "bayer": "Bayer designation",
+    "flamseed": "Flamseed number",
+
+    "ra": "RA",
+    "dec": "Dec",
+
+    "distance": "Distance",
+
+    "magnitude": "Magnitude",
+    "absoluteMagnitude": "Absolute magnitude",
+
+    "spectralType": "Spectral type",
+    "colorIndex": "Color index",
+
+    "raProperMotion": "RA proper motion",
+    "decProperMotion": "Dec proper motion",
+
+    "radialVelocity": "Radial velocity",
+
+    "luminosity": "Luminosity"
+  },
+
+  "units": {
+    "pc": "pc",
+    "kmSec": "km/sec"
   },
 
   "catalogs": {
@@ -35,6 +65,39 @@
 
     "empty": {
       "title": "Catalog not found"
+    }
+  },
+
+  "stars": {
+    "title": "Stars",
+    "subtitle": "Browse available stars",
+
+    "empty": {
+      "title": "No stars found"
+    }
+  },
+
+  "star": {
+    "title": "Star",
+
+    "empty": {
+      "title": "Star not found"
+    }
+  },
+
+  "constellations": {
+    "title": "Constellations",
+
+    "empty": {
+      "title": "No constellations found"
+    }
+  },
+
+  "constellation": {
+    "title": "Constellation",
+
+    "empty": {
+      "title": "Constellation not found"
     }
   }
 }

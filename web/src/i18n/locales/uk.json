@@ -1,10 +1,11 @@
 {
   "nav": {
     "home": "Головна",
-    "catalogs": "Каталоги",
     "systemTheme": "Системна",
     "darkTheme": "Темна",
-    "lightTheme": "Світла"
+    "lightTheme": "Світла",
+    "previous": "Попередня",
+    "next": "Наступна"
   },
 
   "common": {
@@ -13,7 +14,36 @@
     "updated": "Оновлено",
     "description": "Опис",
     "information": "Інформація",
-    "loading": "Завантаження..."
+    "loading": "Завантаження...",
+    "unknown": "Невідомо"
+  },
+
+  "properties": {
+    "bayer": "Позначення Байєра",
+    "flamseed": "Число Флемсіда",
+
+    "ra": "RA",
+    "dec": "Dec",
+
+    "distance": "Відстань",
+
+    "magnitude": "Величина",
+    "absoluteMagnitude": "Абсолютна величина",
+
+    "spectralType": "Спектральний тип",
+    "colorIndex": "Колірний індекс",
+
+    "raProperMotion": "RA власний рух",
+    "decProperMotion": "Dec власний рух",
+
+    "radialVelocity": "Радіальна швидкість",
+
+    "luminosity": "Світність"
+  },
+
+  "units": {
+    "pc": "парсек",
+    "kmSec": "км/сек"
   },
 
   "catalogs": {
@@ -35,6 +65,39 @@
 
     "empty": {
       "title": "Каталог не знайдено"
+    }
+  },
+
+  "stars": {
+    "title": "Зірки",
+    "subtitle": "Переглянути доступні зірки",
+
+    "empty": {
+      "title": "Зірок не знайдено"
+    }
+  },
+
+  "star": {
+    "title": "Зірка",
+
+    "empty": {
+      "title": "Зірку не знайдено"
+    }
+  },
+
+  "constellations": {
+    "title": "Сузір'я",
+
+    "empty": {
+      "title": "Сузір'їв не знайдено"
+    }
+  },
+
+  "constellation": {
+    "title": "Сузір'я",
+
+    "empty": {
+      "title": "Сузір'я не знайдено"
     }
   }
 }

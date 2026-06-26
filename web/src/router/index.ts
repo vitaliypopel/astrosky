@@ -18,6 +18,16 @@ const router = createRouter({
       name: 'catalog',
       component: () => import('@/views/CatalogView.vue'),
     },
+    {
+      path: '/stars',
+      name: 'stars',
+      component: () => import('@/views/StarsView.vue'),
+    },
+    {
+      path: '/stars/:id',
+      name: 'star',
+      component: () => import('@/views/StarView.vue'),
+    },
   ],
 })
 
