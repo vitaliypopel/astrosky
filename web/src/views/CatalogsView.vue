@@ -35,7 +35,7 @@ onMounted(() => loadCatalogs())
   <p align="center" aria-busy="true" v-if="loading">
     {{ $t('common.loading') }}
   </p>
-  <section class="grid" v-else-if="catalogs.length">
+  <section v-else-if="catalogs.length">
     <article v-for="catalog in catalogs">
       <header>
         <h3 class="m-0 p-0">

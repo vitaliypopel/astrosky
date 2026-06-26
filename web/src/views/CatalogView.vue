@@ -38,39 +38,43 @@ onMounted(() => loadCatalog())
     <header>
       <h1>{{ catalog !== null ? catalog.name : $t('catalog.title') }}</h1>
     </header>
-    <section class="grid" v-if="catalog !== null">
-      <article>
-        <h3>{{ $t('common.description') }}</h3>
-        <p>{{ catalog.description }}</p>
-      </article>
-      <article>
-        <h3>{{ $t('common.information') }}</h3>
-        <table>
-          <tbody>
-            <tr>
-              <th>{{ $t('common.code') }}</th>
-              <td>{{ catalog.code }}</td>
-            </tr>
-            <tr>
-              <th>{{ $t('catalog.stats.starsCount') }}</th>
-              <td>{{ catalog.stars_count }}</td>
-            </tr>
-            <tr>
-              <th>{{ $t('catalog.stats.namedStarsCount') }}</th>
-              <td>{{ catalog.named_stars_count }}</td>
-            </tr>
-            <tr>
-              <th>{{ $t('common.created') }}</th>
-              <td>{{ catalog.created_at.slice(0, catalog.created_at.indexOf('T')) }}</td>
-            </tr>
-            <tr>
-              <th>{{ $t('common.updated') }}</th>
-              <td>{{ catalog.updated_at.slice(0, catalog.created_at.indexOf('T')) }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-    </section>
+    <template v-if="catalog !== null">
+      <section>
+        <article>
+          <h3>{{ $t('common.description') }}</h3>
+          <p>{{ catalog.description }}</p>
+        </article>
+      </section>
+      <section>
+        <article>
+          <h3>{{ $t('common.information') }}</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>{{ $t('common.code') }}</th>
+                <td>{{ catalog.code }}</td>
+              </tr>
+              <tr>
+                <th>{{ $t('catalog.stats.starsCount') }}</th>
+                <td>{{ catalog.stars_count }}</td>
+              </tr>
+              <tr>
+                <th>{{ $t('catalog.stats.namedStarsCount') }}</th>
+                <td>{{ catalog.named_stars_count }}</td>
+              </tr>
+              <tr>
+                <th>{{ $t('common.created') }}</th>
+                <td>{{ catalog.created_at.slice(0, catalog.created_at.indexOf('T')) }}</td>
+              </tr>
+              <tr>
+                <th>{{ $t('common.updated') }}</th>
+                <td>{{ catalog.updated_at.slice(0, catalog.created_at.indexOf('T')) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </template>
     <p v-else>
       {{ $t('catalog.empty.title') }}
     </p>
