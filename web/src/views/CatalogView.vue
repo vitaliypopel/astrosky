@@ -62,14 +62,6 @@ onMounted(() => loadCatalog())
                 <th>{{ $t('catalog.stats.namedStarsCount') }}</th>
                 <td>{{ catalog.named_stars_count }}</td>
               </tr>
-              <tr>
-                <th>{{ $t('common.created') }}</th>
-                <td>{{ catalog.created_at.slice(0, catalog.created_at.indexOf('T')) }}</td>
-              </tr>
-              <tr>
-                <th>{{ $t('common.updated') }}</th>
-                <td>{{ catalog.updated_at.slice(0, catalog.created_at.indexOf('T')) }}</td>
-              </tr>
             </tbody>
           </table>
         </article>

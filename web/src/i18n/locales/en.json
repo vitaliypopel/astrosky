@@ -10,8 +10,6 @@
 
   "common": {
     "code": "Code",
-    "created": "Created",
-    "updated": "Updated",
     "description": "Description",
     "information": "Information",
     "loading": "Loading...",

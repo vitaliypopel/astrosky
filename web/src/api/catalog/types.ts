@@ -8,7 +8,4 @@ export interface Catalog {
 
   stars_count: number
   named_stars_count: number
-
-  created_at: string
-  updated_at: string
 }

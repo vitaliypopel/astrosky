@@ -10,8 +10,6 @@
 
   "common": {
     "code": "Код",
-    "created": "Створено",
-    "updated": "Оновлено",
     "description": "Опис",
     "information": "Інформація",
     "loading": "Завантаження...",
