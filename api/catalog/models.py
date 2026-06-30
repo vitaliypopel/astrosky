@@ -17,6 +17,33 @@ class Catalog(models.Model):
         return self.name
 
 
+class Constellation(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    code = models.CharField(max_length=3, unique=True, verbose_name='IAU code')
+
+    ra = models.FloatField(verbose_name='Right Ascension')
+    dec = models.FloatField(verbose_name='Declination')
+
+    area = models.FloatField(verbose_name='Area in square degrees')
+    area_pct = models.FloatField(verbose_name='Area in percentage')
+
+    season = models.CharField(max_length=50, verbose_name='Observation season')
+
+    eq = models.CharField(max_length=50, verbose_name='Equatorial zone')
+    ecl = models.CharField(max_length=50, verbose_name='Ecliptic zone')
+    mw = models.CharField(max_length=50, blank=True, verbose_name='Milky Way zone')
+
+    quad = models.CharField(max_length=50, verbose_name='Quadrant')
+
+    origin = models.CharField(max_length=20, verbose_name='Name origin')
+
+    class Meta:
+        db_table = 'constellations'
+
+    def __str__(self) -> str:
+        return self.name
+
+
 class Star(models.Model):
     catalog = models.ForeignKey(
         Catalog,
