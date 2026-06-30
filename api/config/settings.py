@@ -139,6 +139,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Default primary key
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 # REST framework config
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
