@@ -97,7 +97,7 @@ watch(
           <tbody>
             <tr>
               <th>{{ $t('constellation.title') }}</th>
-              <td>{{ star.con || $t('common.unknown') }}</td>
+              <td>{{ star.constellation?.name || $t('common.unknown') }}</td>
             </tr>
             <tr>
               <th>{{ $t('properties.distance') }}</th>

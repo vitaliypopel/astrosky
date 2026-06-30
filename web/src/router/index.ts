@@ -19,6 +19,16 @@ const router = createRouter({
       component: () => import('@/views/CatalogView.vue'),
     },
     {
+      path: '/constellations',
+      name: 'constellations',
+      component: () => import('@/views/ConstellationsView.vue'),
+    },
+    {
+      path: '/constellations/:id',
+      name: 'constellation',
+      component: () => import('@/views/ConstellationView.vue'),
+    },
+    {
       path: '/stars',
       name: 'stars',
       component: () => import('@/views/StarsView.vue'),

@@ -1,4 +1,5 @@
 import type { Catalog } from '@/api/catalog/types'
+import type { Constellation } from '@/api/constellation/types'
 
 export interface Star {
   id: number
@@ -6,6 +7,8 @@ export interface Star {
   catalog: Catalog
 
   source_id: number
+
+  constellation: Constellation | null
 
   hip: number | null
   hd: number | null
@@ -19,7 +22,6 @@ export interface Star {
 
   bayer: string
   flam: number | null
-  con: string
 
   ra: number
   dec: number

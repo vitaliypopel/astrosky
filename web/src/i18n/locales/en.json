@@ -36,7 +36,20 @@
 
     "radialVelocity": "Radial velocity",
 
-    "luminosity": "Luminosity"
+    "luminosity": "Luminosity",
+
+    "area": "Area",
+    "areaPercent": "Area in percent",
+
+    "season": "Observation season",
+
+    "equatorialZone": "Equatorial zone",
+    "eclipticZone": "Ecliptic zone",
+    "milkyWayZone": "Milky Way zone",
+
+    "quadrant": "Quadrant",
+
+    "nameOrigin": "Name origin"
   },
 
   "units": {
@@ -85,6 +98,7 @@
 
   "constellations": {
     "title": "Constellations",
+    "subtitle": "Browse available constellations",
 
     "empty": {
       "title": "No constellations found"
