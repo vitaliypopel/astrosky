@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Catalog, Star
+from .models import Catalog, Constellation, Star
 
 
 class CatalogSerializer(serializers.ModelSerializer):
@@ -12,9 +12,16 @@ class CatalogSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class ConstellationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Constellation
+        fields = '__all__'
+
+
 class StarSerializer(serializers.ModelSerializer):
     names = serializers.SerializerMethodField()
     catalog = CatalogSerializer(read_only=True)
+    constellation = ConstellationSerializer(read_only=True)
 
     class Meta:
         model = Star

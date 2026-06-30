@@ -1,8 +1,12 @@
 from django.db.models import Count, Q, QuerySet
 from rest_framework import viewsets
 
-from .models import Catalog, Star
-from .serializers import CatalogSerializer, StarSerializer
+from .models import Catalog, Constellation, Star
+from .serializers import (
+    CatalogSerializer,
+    ConstellationSerializer,
+    StarSerializer,
+)
 
 
 class CatalogViewSet(viewsets.ReadOnlyModelViewSet):
@@ -20,6 +24,16 @@ class CatalogViewSet(viewsets.ReadOnlyModelViewSet):
         )
 
 
+class ConstellationViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Constellation.objects.all()
+    serializer_class = ConstellationSerializer
+    pagination_class = None
+
+
 class StarViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Star.objects.select_related('catalog').order_by('pk')
+    queryset = (
+        Star.objects.select_related('catalog')
+        .select_related('constellation')
+        .order_by('pk')
+    )
     serializer_class = StarSerializer
