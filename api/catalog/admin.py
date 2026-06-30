@@ -10,9 +10,8 @@ from .models import Catalog, Constellation, Star
 
 @admin.register(Catalog)
 class CatalogAdmin(admin.ModelAdmin):
-    list_display = ('name', 'code', 'get_description', 'created_at', 'updated_at')
-    list_filter = ('created_at',)
-    ordering = ('created_at',)
+    list_display = ('name', 'code', 'get_description')
+    ordering = ('name',)
     search_fields = ('name', 'code', 'description')
 
     def get_description(self, catalog: Catalog) -> str:

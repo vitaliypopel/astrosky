@@ -3,12 +3,9 @@ from django.db import models
 
 class Catalog(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    code = models.SlugField(max_length=20, unique=True)
+    code = models.SlugField(max_length=20, unique=True, verbose_name='Catalog code')
 
     description = models.TextField(blank=True)
-
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'catalogs'
