@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
   <header>
     <h1>{{ $t('nav.home') }}</h1>
   </header>
-  <section class="grid">
+  <section>
     <article>
       <header>
         <h3 class="m-0 p-0">
@@ -16,6 +16,16 @@ import { RouterLink } from 'vue-router'
         </h3>
       </header>
       {{ $t('catalogs.subtitle') }}
+    </article>
+    <article>
+      <header>
+        <h3 class="m-0 p-0">
+          <RouterLink to="/constellations" class="contrast">
+            {{ $t('constellations.title') }}
+          </RouterLink>
+        </h3>
+      </header>
+      {{ $t('constellations.subtitle') }}
     </article>
     <article>
       <header>
