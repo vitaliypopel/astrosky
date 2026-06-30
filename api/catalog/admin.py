@@ -35,15 +35,24 @@ class StarAdmin(admin.ModelAdmin):
         'get_name',
         'get_catalog_link',
         'source_id',
-        'con',
+        'get_constellation_link',
         'ra',
         'dec',
         'dist',
         'mag',
     )
-    list_filter = ('name', 'catalog__code', 'con')
+    list_filter = ('name', 'catalog__code', 'constellation__code')
     ordering = ('source_id',)
-    search_fields = ('name', 'con')
+    search_fields = (
+        'name',
+        'hip',
+        'hd',
+        'hr',
+        'gl',
+        'bf',
+        'constellation__name',
+        'constellation__code',
+    )
 
     def get_name(self, star: Star) -> str:
         return str(star)
@@ -59,3 +68,18 @@ class StarAdmin(admin.ModelAdmin):
 
     get_catalog_link.admin_order_field = 'catalog'
     get_catalog_link.short_description = 'Catalog'
+
+    def get_constellation_link(self, star: Star) -> SafeString | Any:
+        if not star.constellation:
+            return 'Unknown'
+
+        constellation_admin_name = 'admin:catalog_constellation_change'
+        constellation_url = reverse(
+            constellation_admin_name,
+            args=(star.constellation.id,),
+        )
+        constellation_name = str(star.constellation)
+        return format_html('<a href="{}">{}</a>', constellation_url, constellation_name)
+
+    get_constellation_link.admin_order_field = 'constellation'
+    get_constellation_link.short_description = 'Constellation'

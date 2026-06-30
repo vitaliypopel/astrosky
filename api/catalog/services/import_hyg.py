@@ -3,7 +3,7 @@ import csv
 from django.conf import settings
 from django.db import transaction
 
-from catalog.models import Catalog, Star
+from catalog.models import Catalog, Constellation, Star
 
 HYG_PATH = settings.HYG_PATH
 
@@ -19,36 +19,46 @@ def import_hyg() -> None:
         },
     )
 
+    constellations = {}
+
     stars = []
 
-    with open(HYG_PATH, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
+    with open(HYG_PATH, encoding='utf-8', newline='') as file:
+        reader = csv.DictReader(file)
 
         for row in reader:
+            constellation = constellations.get(row['con'])
+
+            if constellation is None:
+                constellation = Constellation.objects.filter(code=row['con']).first()
+
+                if constellation is not None:
+                    constellations[row['con']] = constellation
+
             stars.append(
                 Star(
                     catalog=catalog,
                     source_id=int(row['id']),
-                    hip=row.get('hip') or None,
-                    hd=row.get('hd') or None,
-                    hr=row.get('hr') or None,
-                    gl=row.get('gl') or '',
-                    bf=row.get('bf') or '',
-                    name=row.get('proper') or '',
-                    bayer=row.get('bayer') or '',
-                    flam=row.get('flaw') or None,
-                    con=row.get('con') or '',
+                    constellation=constellation,
+                    hip=row['hip'] or None,
+                    hd=row['hd'] or None,
+                    hr=row['hr'] or None,
+                    gl=row['gl'],
+                    bf=row['bf'],
+                    name=row['proper'],
+                    bayer=row['bayer'],
+                    flam=row['flam'] or None,
                     ra=row['ra'],
                     dec=row['dec'],
-                    dist=row.get('dist') or None,
+                    dist=row['dist'] or None,
                     mag=row['mag'],
-                    absmag=row.get('absmag') or None,
-                    spect=row.get('spect') or '',
-                    ci=row.get('ci') or None,
-                    pmra=row.get('pmra') or None,
-                    pmdec=row.get('pmdec') or None,
-                    rv=row.get('rv') or None,
-                    lum=row.get('lum') or None,
+                    absmag=row['absmag'] or None,
+                    spect=row['spect'],
+                    ci=row['ci'] or None,
+                    pmra=row['pmra'] or None,
+                    pmdec=row['pmdec'] or None,
+                    rv=row['rv'] or None,
+                    lum=row['lum'] or None,
                 )
             )
 

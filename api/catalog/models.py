@@ -53,6 +53,14 @@ class Star(models.Model):
 
     source_id = models.PositiveIntegerField()
 
+    constellation = models.ForeignKey(
+        Constellation,
+        on_delete=models.PROTECT,
+        related_name='stars',
+        null=True,
+        blank=True,
+    )
+
     hip = models.PositiveIntegerField(
         null=True,
         blank=True,
@@ -94,7 +102,6 @@ class Star(models.Model):
         blank=True,
         verbose_name='Flamsteed number',
     )
-    con = models.CharField(max_length=3, verbose_name='Constellation abbreviation')
 
     ra = models.FloatField(verbose_name='Right Ascension')
     dec = models.FloatField(verbose_name='Declination')
