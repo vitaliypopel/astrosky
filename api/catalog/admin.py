@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.safestring import SafeString
 
-from .models import Catalog, Star
+from .models import Catalog, Constellation, Star
 
 
 @admin.register(Catalog)
@@ -20,6 +20,13 @@ class CatalogAdmin(admin.ModelAdmin):
 
     get_description.admin_order_field = 'description'
     get_description.short_description = 'Description'
+
+
+@admin.register(Constellation)
+class ConstellationAdmin(admin.ModelAdmin):
+    list_display = ('name', 'code', 'ra', 'dec', 'area', 'area_pct')
+    ordering = ('name',)
+    search_fields = ('name', 'code')
 
 
 @admin.register(Star)
