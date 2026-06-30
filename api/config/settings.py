@@ -150,5 +150,7 @@ CORS_ALLOWED_ORIGINS = [
     config('WEB_URL', default='http://localhost:5000'),
 ]
 
-# Catalogs path
-HYG_PATH = REPO_ROOT / 'datasets' / 'hyg.csv'
+# Datasets path
+DATASETS_PATH = REPO_ROOT / 'datasets'
+CONSTELLATIONS_PATH = DATASETS_PATH / 'constellations.csv'
+HYG_PATH = DATASETS_PATH / 'hyg.csv'
