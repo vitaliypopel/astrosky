@@ -1,4 +1,4 @@
-from engine.coordinates.hour_angle import hour_angle
+from engine.coordinates import hour_angle
 from engine.coordinates.kernel import horizontal_kernel
 from engine.coordinates.projection import project_horizontal
 

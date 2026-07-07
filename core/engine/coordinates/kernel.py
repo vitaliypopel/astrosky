@@ -1,6 +1,6 @@
 import math
 
-from engine.math.scalar import deg2rad
+from engine.math import deg2rad
 
 
 def horizontal_kernel(

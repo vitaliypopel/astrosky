@@ -1,3 +1,3 @@
-from engine.services.altaz import calculate_altaz
+from .altaz import calculate_altaz
 
 __all__ = ['calculate_altaz']

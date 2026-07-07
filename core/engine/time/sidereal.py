@@ -1,4 +1,4 @@
-from engine.math.angles import wrap360
+from engine.math import wrap360
 
 
 def gmst(jd: float) -> float:
