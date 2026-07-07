@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from catalog.services.import_stars import import_stars
+from catalog.importers import import_stars
 
 
 class Command(BaseCommand):

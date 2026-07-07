@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from catalog.services.import_constellations import import_constellations
+from catalog.importers import import_constellations
 
 
 class Command(BaseCommand):
