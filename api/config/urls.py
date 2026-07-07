@@ -24,6 +24,7 @@ admin.site.index_title = 'Admin Panel'
 
 api_urls = [
     path('', include('catalog.urls')),
+    path('', include('observation.urls')),
 ]
 
 urlpatterns = [

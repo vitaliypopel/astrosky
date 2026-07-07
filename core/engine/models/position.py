@@ -5,7 +5,7 @@ from engine.models.object import StellarObject
 
 @dataclass(slots=True, frozen=True)
 class StellarPosition:
-    object: StellarObject
+    obj: StellarObject
 
     ha: float
     alt: float

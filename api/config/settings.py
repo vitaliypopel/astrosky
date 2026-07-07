@@ -53,7 +53,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'catalog.apps.CatalogConfig',
+    'catalog',
+    'observation',
 ]
 
 MIDDLEWARE = [
