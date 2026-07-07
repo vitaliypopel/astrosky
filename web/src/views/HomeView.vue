@@ -10,22 +10,12 @@ import { RouterLink } from 'vue-router'
     <article>
       <header>
         <h3 class="m-0 p-0">
-          <RouterLink to="/constellations" class="contrast">
-            {{ $t('constellations.title') }}
+          <RouterLink to="/catalog" class="contrast">
+            {{ $t('catalog.title') }}
           </RouterLink>
         </h3>
       </header>
-      {{ $t('constellations.subtitle') }}
-    </article>
-    <article>
-      <header>
-        <h3 class="m-0 p-0">
-          <RouterLink to="/stars" class="contrast">
-            {{ $t('stars.title') }}
-          </RouterLink>
-        </h3>
-      </header>
-      {{ $t('stars.subtitle') }}
+      {{ $t('catalog.subtitle') }}
     </article>
   </section>
 </template>

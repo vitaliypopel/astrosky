@@ -15,6 +15,11 @@
     "unknown": "Unknown"
   },
 
+  "catalog": {
+    "title": "Catalog",
+    "subtitle": "Browse stellar objects"
+  },
+
   "properties": {
     "bayer": "Bayer designation",
     "flamseed": "Flamseed number",
