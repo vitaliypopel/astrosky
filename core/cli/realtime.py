@@ -1,6 +1,6 @@
 import argparse
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from engine import calculate_altaz
 from engine.formatting.sexagesimal import deg_to_dms, deg_to_hms
@@ -9,13 +9,44 @@ from engine.formatting.sexagesimal import deg_to_dms, deg_to_hms
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--ra', type=float, required=True)
-    parser.add_argument('--dec', type=float, required=True)
+    parser.add_argument(
+        '--ra',
+        type=float,
+        required=True,
+        help='Right Ascension in degrees, e.g. 3.141592',
+    )
+    parser.add_argument(
+        '--dec',
+        type=float,
+        required=True,
+        help='Declination in degrees, e.g. 3.141592',
+    )
 
-    parser.add_argument('--lat', type=float, required=True)
-    parser.add_argument('--lon', type=float, required=True)
+    parser.add_argument(
+        '--lat',
+        type=float,
+        required=True,
+        help='Latitude in degrees, e.g. 40.741895',
+    )
+    parser.add_argument(
+        '--lon',
+        type=float,
+        required=True,
+        help='Longitude in degrees, e.g. -73.989308',
+    )
 
-    parser.add_argument('--interval', type=float, default=1.0)
+    parser.add_argument(
+        '--dt',
+        type=lambda dt_iso: datetime.fromisoformat(str(dt_iso)),
+        help='ISO 8601 datetime, e.g. 2000-01-01T00:00:00+00:00',
+    )
+
+    parser.add_argument(
+        '--interval',
+        type=float,
+        default=1.0,
+        help='Real-time interval in seconds, e.g. 1, 5, 10',
+    )
 
     return parser.parse_args()
 
@@ -31,9 +62,11 @@ def main() -> None:
     ra_hms = deg_to_dms(ra_h)
     dec_dms = deg_to_dms(dec_deg)
 
-    while True:
-        dt = datetime.now(timezone.utc)
+    dt = args.dt or datetime.now(timezone.utc)
 
+    interval = args.interval
+
+    while True:
         result = calculate_altaz(
             ra_h,
             dec_deg,
@@ -60,7 +93,8 @@ def main() -> None:
             f'az:\t{az_dms[0]}°\t{az_dms[1]}\'\t{az_dms[2]}"\n'
         )
 
-        time.sleep(args.interval)
+        dt += timedelta(seconds=interval)
+        time.sleep(interval)
 
 
 if __name__ == '__main__':
