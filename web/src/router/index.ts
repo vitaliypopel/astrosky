@@ -9,16 +9,6 @@ const router = createRouter({
       component: () => import('@/views/HomeView.vue'),
     },
     {
-      path: '/catalogs',
-      name: 'catalogs',
-      component: () => import('@/views/CatalogsView.vue'),
-    },
-    {
-      path: '/catalogs/:code',
-      name: 'catalog',
-      component: () => import('@/views/CatalogView.vue'),
-    },
-    {
       path: '/constellations',
       name: 'constellations',
       component: () => import('@/views/ConstellationsView.vue'),

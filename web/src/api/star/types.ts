@@ -1,12 +1,7 @@
-import type { Catalog } from '@/api/catalog/types'
 import type { Constellation } from '@/api/constellation/types'
 
 export interface Star {
   id: number
-
-  catalog: Catalog
-
-  source_id: number
 
   constellation: Constellation | null
 

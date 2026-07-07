@@ -1,19 +1,6 @@
 from django.db import models
 
 
-class Catalog(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    code = models.SlugField(max_length=20, unique=True, verbose_name='Catalog code')
-
-    description = models.TextField(blank=True)
-
-    class Meta:
-        db_table = 'catalogs'
-
-    def __str__(self) -> str:
-        return self.name
-
-
 class Constellation(models.Model):
     name = models.CharField(max_length=50, unique=True)
     code = models.CharField(max_length=3, unique=True, verbose_name='IAU code')
@@ -42,14 +29,6 @@ class Constellation(models.Model):
 
 
 class Star(models.Model):
-    catalog = models.ForeignKey(
-        Catalog,
-        on_delete=models.PROTECT,
-        related_name='stars',
-    )
-
-    source_id = models.PositiveIntegerField()
-
     constellation = models.ForeignKey(
         Constellation,
         on_delete=models.PROTECT,
@@ -134,13 +113,6 @@ class Star(models.Model):
 
     class Meta:
         db_table = 'stars'
-
-        constraints = [
-            models.UniqueConstraint(
-                fields=['catalog', 'source_id'],
-                name='unique_catalog_object',
-            ),
-        ]
 
     def get_names(self) -> list[str]:
         names = []

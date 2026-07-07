@@ -10,16 +10,6 @@ import { RouterLink } from 'vue-router'
     <article>
       <header>
         <h3 class="m-0 p-0">
-          <RouterLink to="/catalogs" class="contrast">
-            {{ $t('catalogs.title') }}
-          </RouterLink>
-        </h3>
-      </header>
-      {{ $t('catalogs.subtitle') }}
-    </article>
-    <article>
-      <header>
-        <h3 class="m-0 p-0">
           <RouterLink to="/constellations" class="contrast">
             {{ $t('constellations.title') }}
           </RouterLink>

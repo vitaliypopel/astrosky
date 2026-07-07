@@ -156,4 +156,4 @@ CORS_ALLOWED_ORIGINS = [
 # Datasets path
 DATASETS_PATH = REPO_ROOT / 'datasets'
 CONSTELLATIONS_PATH = DATASETS_PATH / 'constellations.csv'
-HYG_PATH = DATASETS_PATH / 'hyg.csv'
+STARS_PATH = DATASETS_PATH / 'stars.csv'

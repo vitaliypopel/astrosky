@@ -3,27 +3,17 @@ import csv
 from django.conf import settings
 from django.db import transaction
 
-from catalog.models import Catalog, Constellation, Star
+from catalog.models import Constellation, Star
 
-HYG_PATH = settings.HYG_PATH
+STARS_PATH = settings.STARS_PATH
 
 
-def import_hyg() -> None:
-    catalog, _ = Catalog.objects.get_or_create(
-        code='hyg',
-        defaults={
-            'name': 'HYG Database',
-            'description': 'HYG Database (v4.2) is subset of the star data in three major catalogs: '
-            'the Hipparcos Catalog, the Yale Bright Start Catalog (5th Edition) '
-            'and the Gliese Catalog of Nearbly Stars (3rd Edition).',
-        },
-    )
-
+def import_stars() -> None:
     constellations = {}
 
     stars = []
 
-    with open(HYG_PATH, encoding='utf-8', newline='') as file:
+    with open(STARS_PATH, encoding='utf-8', newline='') as file:
         reader = csv.DictReader(file)
 
         for row in reader:
@@ -37,8 +27,6 @@ def import_hyg() -> None:
 
             stars.append(
                 Star(
-                    catalog=catalog,
-                    source_id=int(row['id']),
                     constellation=constellation,
                     hip=row['hip'] or None,
                     hd=row['hd'] or None,
