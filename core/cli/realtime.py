@@ -2,8 +2,9 @@ import argparse
 import time
 from datetime import datetime, timedelta, timezone
 
-from engine import calculate_altaz
+from engine import observe
 from engine.formatting import deg_to_dms, deg_to_hms
+from engine.models import Observer, StellarObject
 
 
 def parse_args() -> argparse.Namespace:
@@ -54,40 +55,32 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
 
-    ra_h = args.ra
-    dec_deg = args.dec
-    lat_deg = args.lat
-    lon_deg = args.lon
+    observer = Observer(args.lat, args.lon)
+    obj = StellarObject(args.ra, args.dec)
 
-    ra_hms = deg_to_dms(ra_h)
-    dec_dms = deg_to_dms(dec_deg)
+    ra_hms = deg_to_dms(obj.ra)
+    dec_dms = deg_to_dms(obj.dec)
 
     dt = args.dt or datetime.now(timezone.utc)
 
     interval = args.interval
 
     while True:
-        result = calculate_altaz(
-            ra_h,
-            dec_deg,
-            lat_deg,
-            lon_deg,
-            dt,
-        )
+        observation = observe(observer, obj, dt)
 
-        ha_hms = deg_to_hms(result['ha'])
-        alt_dms = deg_to_dms(result['alt'])
-        az_dms = deg_to_dms(result['az'])
+        ha_hms = deg_to_hms(observation.positions[0].ha)
+        alt_dms = deg_to_dms(observation.positions[0].alt)
+        az_dms = deg_to_dms(observation.positions[0].az)
 
         print(
             f'ra:\t{ra_hms[0]}h\t{ra_hms[1]}m\t{ra_hms[2]}s\n'
             f'dec:\t{dec_dms[0]}°\t{dec_dms[1]}\'\t{dec_dms[2]}"\n'
-            f'lat:\t{lat_deg}\n'
-            f'lon:\t{lon_deg}\n'
+            f'lat:\t{observer.lat}\n'
+            f'lon:\t{observer.lon}\n'
             f'dt:\t{dt}\n'
-            f'jd:\t{result["jd"]}\n'
-            f'gmst:\t{result["gmst"]}\n'
-            f'lst:\t{result["lst"]}\n'
+            f'jd:\t{observation.context.jd}\n'
+            f'gmst:\t{observation.context.gmst}\n'
+            f'lst:\t{observation.context.lst}\n'
             f'ha:\t{ha_hms[0]}h\t{ha_hms[1]}m\t{ha_hms[2]}s\n'
             f'alt:\t{alt_dms[0]}°\t{alt_dms[1]}\'\t{alt_dms[2]}"\n'
             f'az:\t{az_dms[0]}°\t{az_dms[1]}\'\t{az_dms[2]}"\n'

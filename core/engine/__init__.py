@@ -1,3 +1,3 @@
-from engine.services import calculate_altaz
+from engine.observation import observe, observe_many
 
-__all__ = ['calculate_altaz']
+__all__ = ['observe', 'observe_many']
