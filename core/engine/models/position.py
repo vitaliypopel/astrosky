@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 
-from engine.models.object import StellarObject
+from engine.models.object import CelestialObject
 
 
 @dataclass(slots=True, frozen=True)
-class StellarPosition:
-    obj: StellarObject
+class CelestialObjectPosition:
+    obj: CelestialObject
 
     ha: float
     alt: float

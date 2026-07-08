@@ -1,5 +1,5 @@
 from engine import observe, observe_many
-from engine.models import Observer, StellarObject
+from engine.models import CelestialObject, Observer
 from rest_framework.generics import GenericAPIView
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -22,7 +22,7 @@ class ObserveAPIView(GenericAPIView):
 
         observation = observe(
             Observer(**data['observer']),
-            StellarObject(**data['obj']),
+            CelestialObject(**data['obj']),
             data['dt'],
         )
 
@@ -40,7 +40,7 @@ class ObserveManyAPIView(GenericAPIView):
 
         observation = observe_many(
             Observer(**data['observer']),
-            [StellarObject(**obj) for obj in data['objects']],
+            [CelestialObject(**obj) for obj in data['objects']],
             data['dt'],
         )
 

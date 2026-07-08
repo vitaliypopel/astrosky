@@ -2,6 +2,6 @@ from dataclasses import dataclass
 
 
 @dataclass(slots=True, frozen=True)
-class StellarObject:
+class CelestialObject:
     ra: float
     dec: float

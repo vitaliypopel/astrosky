@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 
 from engine import observe
 from engine.formatting import deg_to_dms, deg_to_hms
-from engine.models import Observer, StellarObject
+from engine.models import CelestialObject, Observer
 
 
 def parse_args() -> argparse.Namespace:
@@ -56,7 +56,7 @@ def main() -> None:
     args = parse_args()
 
     observer = Observer(args.lat, args.lon)
-    obj = StellarObject(args.ra, args.dec)
+    obj = CelestialObject(args.ra, args.dec)
 
     ra_hms = deg_to_dms(obj.ra)
     dec_dms = deg_to_dms(obj.dec)

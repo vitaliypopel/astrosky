@@ -17,12 +17,12 @@
 
   "catalog": {
     "title": "Catalog",
-    "subtitle": "Browse celestial bodies"
+    "subtitle": "Browse celestial objects"
   },
 
   "observation": {
     "title": "Observation",
-    "subtitle": "Compute and observe positions of celestial bodies"
+    "subtitle": "Compute and observe positions of celestial objects"
   },
 
   "properties": {

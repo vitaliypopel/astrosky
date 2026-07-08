@@ -7,20 +7,20 @@ class ObserverSerializer(serializers.Serializer):
     lon = serializers.FloatField()
 
 
-class StellarObjectSerializer(serializers.Serializer):
+class CelestialObjectSerializer(serializers.Serializer):
     ra = serializers.FloatField()
     dec = serializers.FloatField()
 
 
 class ObserveSerializer(serializers.Serializer):
     observer = ObserverSerializer()
-    obj = StellarObjectSerializer()
+    obj = CelestialObjectSerializer()
     dt = serializers.DateTimeField(required=False, default=timezone.now)
 
 
 class ObserveManySerializer(serializers.Serializer):
     observer = ObserverSerializer()
-    objects = StellarObjectSerializer(many=True)
+    objects = CelestialObjectSerializer(many=True)
     dt = serializers.DateTimeField(required=False, default=timezone.now)
 
 
@@ -32,8 +32,8 @@ class ObservationContextSerializer(serializers.Serializer):
     lst = serializers.FloatField()
 
 
-class StellarPositionSerializer(serializers.Serializer):
-    obj = StellarObjectSerializer()
+class CelestialObjectPositionSerializer(serializers.Serializer):
+    obj = CelestialObjectSerializer()
     ha = serializers.FloatField()
     alt = serializers.FloatField()
     az = serializers.FloatField()
@@ -41,4 +41,4 @@ class StellarPositionSerializer(serializers.Serializer):
 
 class ObservationSerializer(serializers.Serializer):
     context = ObservationContextSerializer()
-    positions = StellarPositionSerializer(many=True)
+    positions = CelestialObjectPositionSerializer(many=True)

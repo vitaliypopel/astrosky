@@ -3,20 +3,20 @@ export interface Observer {
   lon: number
 }
 
-export interface StellarObject {
+export interface CelestialObject {
   ra: number
   dec: Number
 }
 
 export interface ObserveQuery {
   observer: Observer
-  obj: StellarObject
+  obj: CelestialObject
   dt: string | null
 }
 
 export interface ObserveManyQuery {
   observer: Observer
-  objects: StellarObject[]
+  objects: CelestialObject[]
   dt: string | null
 }
 
@@ -28,8 +28,8 @@ export interface ObservationContext {
   lst: number
 }
 
-export interface StellarPosition {
-  obj: StellarObject
+export interface CelestialObjectPosition {
+  obj: CelestialObject
   ha: number
   alt: number
   az: number
@@ -37,5 +37,5 @@ export interface StellarPosition {
 
 export interface Observation {
   context: ObservationContext
-  positions: StellarPosition[]
+  positions: CelestialObjectPosition[]
 }

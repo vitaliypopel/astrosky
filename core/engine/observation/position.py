@@ -3,11 +3,11 @@ from typing import Iterable
 
 from engine.coordinates import equatorial_to_horizontal_from_ha, hour_angle
 from engine.models import (
+    CelestialObject,
+    CelestialObjectPosition,
     Observation,
     ObservationContext,
     Observer,
-    StellarObject,
-    StellarPosition,
 )
 from engine.time import gmst, julian_date, lst
 
@@ -22,24 +22,24 @@ def create_context(observer: Observer, dt: datetime) -> ObservationContext:
 
 def calculate_position(
     context: ObservationContext,
-    obj: StellarObject,
-) -> StellarPosition:
+    obj: CelestialObject,
+) -> CelestialObjectPosition:
     ha_deg = hour_angle(obj.ra, context.lst)
     alt_deg, az_deg = equatorial_to_horizontal_from_ha(
         ha_deg, obj.dec, context.observer.lat
     )
 
-    return StellarPosition(obj, ha_deg, alt_deg, az_deg)
+    return CelestialObjectPosition(obj, ha_deg, alt_deg, az_deg)
 
 
 def calculate_positions(
     context: ObservationContext,
-    objects: Iterable[StellarObject],
-) -> list[StellarPosition]:
+    objects: Iterable[CelestialObject],
+) -> list[CelestialObjectPosition]:
     return [calculate_position(context, obj) for obj in objects]
 
 
-def observe(observer: Observer, obj: StellarObject, dt: datetime) -> Observation:
+def observe(observer: Observer, obj: CelestialObject, dt: datetime) -> Observation:
     context = create_context(observer, dt)
     position = calculate_position(context, obj)
 
@@ -48,7 +48,7 @@ def observe(observer: Observer, obj: StellarObject, dt: datetime) -> Observation
 
 def observe_many(
     observer: Observer,
-    objects: Iterable[StellarObject],
+    objects: Iterable[CelestialObject],
     dt: datetime,
 ) -> Observation:
     context = create_context(observer, dt)
