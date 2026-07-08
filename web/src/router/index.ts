@@ -6,32 +6,37 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/HomeView.vue'),
+      component: () => import('@/views/general/HomeView.vue'),
     },
     {
       path: '/catalog',
       name: 'catalog',
-      component: () => import('@/views/CatalogView.vue'),
+      component: () => import('@/views/catalog/CatalogView.vue'),
     },
     {
       path: '/constellations',
       name: 'constellations',
-      component: () => import('@/views/ConstellationsView.vue'),
+      component: () => import('@/views/catalog/ConstellationsView.vue'),
     },
     {
       path: '/constellations/:id',
       name: 'constellation',
-      component: () => import('@/views/ConstellationView.vue'),
+      component: () => import('@/views/catalog/ConstellationView.vue'),
     },
     {
       path: '/stars',
       name: 'stars',
-      component: () => import('@/views/StarsView.vue'),
+      component: () => import('@/views/catalog/StarsView.vue'),
     },
     {
       path: '/stars/:id',
       name: 'star',
-      component: () => import('@/views/StarView.vue'),
+      component: () => import('@/views/catalog/StarView.vue'),
+    },
+    {
+      path: '/observation',
+      name: 'observation',
+      component: () => import('@/views/observation/ObservationView.vue'),
     },
   ],
 })
